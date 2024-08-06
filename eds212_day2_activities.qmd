@@ -4,3 +4,65 @@ author: "Joshua Paul Cohen"
 format: html
 ---
 
+```{r}
+
+# find slope if this or something
+eq1 <- function(x) {
+  x^2
+}
+
+#find derivative
+eq1_deriv <- D(expression(x^2), "x")
+
+#turn deriv into function
+
+eq1_deriv_func <- function(x) {
+  2 * x
+}
+
+#find slope
+eq1_slope <- eq1_deriv_func(3)
+
+#make some data ranges
+my_data_range_1 <- data.frame(x = c(0, 10))
+```
+
+
+```{r}
+# now do the same with P(a) ----
+
+# make function
+eq2 <- function(a) {
+  2 * (3*a+2)^4 - 5
+}
+
+#find derivative of f(a) ----
+eq2_deriv <- D(expression(2 * (3*a+2)^4 - 5), "a")
+
+#turn f(a) deriv into func
+eq2_deriv_func <- function(a) {
+  2 * (4 * (3 * (3 * a + 2)^3))
+}
+
+#find slope
+eq2_slope <- eq2_deriv_func(1.2)
+
+#make data ranges
+my_data_range_2 <- data.frame(a = c(0,2))
+
+```
+
+
+```{r}
+# render the shit now
+
+ggplot(data = my_data_range_1, aes(x = x)) + geom_function(fun = eq1)
+```
+
+```{r}
+#and again
+
+ggplot(data = my_data_range_2, aes(x = a)) + geom_function(fun = eq2)
+
+```
+
