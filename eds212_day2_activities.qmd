@@ -1,0 +1,6 @@
+---
+title: "wk1_day2_afterday_practice_problems"
+author: "Joshua Paul Cohen"
+format: html
+---
+
