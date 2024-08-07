@@ -5,6 +5,14 @@ format: html
 ---
 
 ```{r}
+#load in libraries
+library(palmerpenguins)
+library(tidyverse)
+library(ggplot2)
+```
+
+
+```{r}
 
 # find slope if this or something
 eq1 <- function(x) {
@@ -63,6 +71,25 @@ ggplot(data = my_data_range_1, aes(x = x)) + geom_function(fun = eq1)
 #and again
 
 ggplot(data = my_data_range_2, aes(x = a)) + geom_function(fun = eq2)
+
+```
+
+
+```{r}
+
+#penguin time ------
+
+#penguin time
+
+penguins <- penguins
+
+```
+
+```{r}
+
+#penguin time again ----
+
+ggplot(data = penguins, aes(x = species, y = flipper_length_mm)) + geom_point() + geom_jitter() + labs(x = "Species", y = "Flipper Length (mm)", title = "Flipper Length in Penguins by Species")
 
 ```
 
