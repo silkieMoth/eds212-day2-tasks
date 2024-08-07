@@ -89,7 +89,7 @@ penguins <- penguins
 
 #penguin time again ----
 
-ggplot(data = penguins, aes(x = species, y = flipper_length_mm)) + geom_point() + geom_jitter() + labs(x = "Species", y = "Flipper Length (mm)", title = "Flipper Length in Penguins by Species")
+ggplot(data = penguins, aes(x = species, y = flipper_length_mm, color = species)) + geom_point() + geom_jitter() + labs(x = "Species", y = "Flipper Length (mm)", title = "Flipper Length in Penguins by Species")
 
 ```
 
