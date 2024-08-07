@@ -70,7 +70,7 @@ ggplot(data = my_data_range_1, aes(x = x)) + geom_function(fun = eq1)
 ```{r}
 #and again
 
-ggplot(data = my_data_range_2, aes(x = a)) + geom_function(fun = eq2)
+ggplot(data = my_data_range_2, aes(x = a)) + geom_function(fun = eq2, color = "red")
 
 ```
 
